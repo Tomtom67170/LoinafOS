@@ -1,4 +1,4 @@
-$config="$HOME/.config"
+config="$HOME/.config"
 
 cp -r asset "$config"
 cp -r hypr "$config"
