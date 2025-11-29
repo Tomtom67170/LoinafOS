@@ -1,4 +1,4 @@
-$config = ~/.config
+$config=~/.config
 
 cp -r asset $config
 cp -r hypr $config
