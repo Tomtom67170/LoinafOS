@@ -1,8 +1,6 @@
 window {
 margin: 5px;
-border: 2px solid #f19e5f;
-background-color: #f19e5f;
-border-radius: 10px;
+border: 2px solid red;
 }
 
 #input {
@@ -18,9 +16,10 @@ background-color: yellow;
 }
 
 #outer-box {
+border-radius: 10px;
 margin: 5px;
-border: 2px solid green;
-background-color: green;
+border: 2px solid #edb970;
+background-color: #edb970;
 }
 
 #scroll {
