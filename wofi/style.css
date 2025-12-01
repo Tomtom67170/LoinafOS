@@ -15,8 +15,7 @@ background-color: yellow;
 }
 
 #outer-box {
-border-radius: 10px;
-margin: 0px;
+border-radius: 100px;
 /*border: 2px solid #edb970;*/
 background-color: #edb970;
 }
