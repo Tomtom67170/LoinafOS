@@ -8,8 +8,8 @@ if [ $time -ge $unlock_time ]
 then
 	echo "$time et $unlock_time"
 	echo "Temps écoulé"
-	hyprctl dispatch exit
-	exit
+	loginctl terminate-user $USER
+	
 else
 	echo "Trop tôt"
 fi
