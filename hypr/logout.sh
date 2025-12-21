@@ -1,7 +1,5 @@
-#!/bin/bash
-
 LOCK_HOUR=$(cat "/tmp/unlock.txt")
-unlock_time=$((LOCK_HOUR + 30))
+unlock_time=$((LOCK_HOUR + 3600))
 time=$(date +"%s")
 
 if [ $time -ge $unlock_time ] 

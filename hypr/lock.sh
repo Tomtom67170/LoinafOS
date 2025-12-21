@@ -1,5 +1,3 @@
-#!/bin/bash
-
 LOCK_STMP=$(date +"%s")
 export HOUR_LOCK=$(date +"%H:%M:%S")
 
