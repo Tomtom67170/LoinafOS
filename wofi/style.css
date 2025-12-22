@@ -1,33 +1,40 @@
-/*window {
-margin: 5px;
-}*/
+window {
+margin: 0px;
+border-radius: 10px;
+border: 1px solid #928374;
+background-color: #002b36;
+}
 
 #input {
 margin: 5px;
-border: 2px solid blue;
-background-color: blue;
+border: none;
+color: #839496;
+background-color: #073642;
 }
 
 #inner-box {
 margin: 5px;
-border: 2px solid yellow;
-background-color: yellow;
+border: none;
+background-color: #002b36;
 }
 
 #outer-box {
-border-radius: 100px;
-/*border: 2px solid #edb970;*/
-background-color: #edb970;
+margin: 5px;
+border: none;
+background-color: #002b36;
 }
 
 #scroll {
-margin: 5px;
-border: 2px solid orange;
-background-color: orange;
+margin: 0px;
+border: none;
 }
 
 #text {
 margin: 5px;
-border: 2px solid cyan;
-background-color: cyan;
-} 
+border: none;
+color: #839496;
+}
+
+#entry:selected {
+background-color: #073642;
+}
