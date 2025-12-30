@@ -31,6 +31,11 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+/*#tray{
+    icon-size: 21;
+    spacing: 10;
+}*/
+
 #memory{
   padding: 0px 20px;
   margin: 5px 0px;
@@ -140,6 +145,7 @@
 #backlight,
 #network,
 #custom-lock,
+#tray,
 #battery {
   background-color: #1a1b26;
   padding: 0.3rem 0.7rem;
@@ -156,11 +162,12 @@
 #backlight:hover,
 #network:hover,
 #custom-lock:hover,
+#tray:hover,
 #battery:hover {
   background-color: rgb(41, 42, 53);
 }
 
-#bluetooth {
+#tray {
   margin-left: 0px; 
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -189,6 +196,10 @@
 }
 #backlight {
   color: #c6d0f5;
+}
+
+#tray{
+	color: #c6d0f5;
 }
 
 #network {
