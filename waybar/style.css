@@ -31,6 +31,38 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
+#temperature{
+  background-color: #41b8ff;
+  padding: 0.3rem 0.7rem;
+  margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
+  border-radius: 6px; /* These modules are always rounded */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+  border: none;
+  /* Transition for background-color and color only */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#temperature:hover {
+  background-color: rgb(5, 116, 183); /* Brighter highlight */
+}
+
+#temperature.warning{
+	background-color: #ffab42;
+}
+
+#temperature.warning:hover {
+	background-color: #b86c0b;
+}
+
+#temperature.critical {
+	background-color: #bb2828;
+}
+
+#temperature.critical:hover {
+	background-color: #6e0000;
+}
+
 /*#tray{
     icon-size: 21;
     spacing: 10;
@@ -43,6 +75,15 @@
   background-color: #801ee3;
   color: #fff;
   border-radius: 5px;
+}
+
+#custom-music{
+padding: 0px 20px;
+  margin: 5px 5px;
+  background-color: #007b01;
+  color: #fff;
+  border-radius: 5px;
+
 }
 
 #workspaces {
@@ -184,6 +225,10 @@
 }
 #cpu {
   color: #c6d0f5;
+}
+
+#temperature {
+  color: #fff;
 }
 
 #clock {
