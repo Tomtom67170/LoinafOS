@@ -12,8 +12,9 @@
 #waybar {
   background: transparent;
   color: #801ee3;
-  margin: 0px;
+  border-bottom: 5px;
   font-weight: 500;
+  /*padding-bottom: 100px;*/
 }
 
 /* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
@@ -82,6 +83,15 @@ padding: 0px 20px;
   margin: 5px 5px;
   background-color: #007b01;
   color: #fff;
+  border-radius: 5px;
+
+}
+
+#custom-weather{
+padding: 0px 20px;
+  margin: 5px 5px;
+  background-color: #90cfef;
+  color: #000;
   border-radius: 5px;
 
 }
