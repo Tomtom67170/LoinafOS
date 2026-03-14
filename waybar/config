@@ -58,6 +58,7 @@
                 "com.github.PintaProject.Pinta": "",
                 "class<kitty> title<.*nvim.*>": "",
                 "figma-linux": "",
+                "mpv": "",
             }
         },
 
