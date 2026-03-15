@@ -1,0 +1,26 @@
+[
+    {
+        "city": "Wahlenheim",
+        "lat": "48.763566",
+        "lon": "7.685239",
+        "dept": 67
+    },
+    {
+        "city": "Geudertheim",
+        "lat": "48.719126",
+        "lon": "7.756935",
+        "dept": 67
+    },
+    {
+        "city": "Strasbourg",
+        "lat": "48.579831",
+        "lon": "7.761454",
+        "dept": 67
+    },
+    {
+        "city": "Grenoble",
+        "lat": "45.182828",
+        "lon": "5.724369",
+        "dept": 38
+    }
+]

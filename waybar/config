@@ -173,7 +173,9 @@
             "format": "{}",
             "return-type":"json",
             "exec": "python ~/.config/waybar/scripts/weather.py",
-            "interval": 900
+            "interval": 900,
+            "on-click": "kitty python ~/.config/waybar/scripts/change.py",
+            "on-click-right": "python ~/.config/waybar/scripts/weather.py"
         }
 }
 
