@@ -1,8 +1,5 @@
-from botan3 import scrypt
 import requests
 import json, os
-from ntpath import expanduser
-from posix import stat
 
 icon_code = {
     "0": "",
