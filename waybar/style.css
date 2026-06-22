@@ -157,6 +157,7 @@ padding: 0px 20px;
 /* --- Center Module (Individual, Fully Rounded Block - With Simple Hover) --- */
 #clock {
   background-color: #6b0ca6;
+  color: #fff;
   padding: 0.3rem 0.7rem;
   margin: 5px 0px;
   border-radius: 6px; /* This module is always rounded */
@@ -262,7 +263,7 @@ padding: 0px 20px;
 }
 
 #clock {
-  color: #281236;
+  color: #fff;
   font-weight: 500;
 }
 

@@ -90,7 +90,8 @@
             "timezone": "Europe/Paris",
             "tooltip": false,
             "format": "{:%H:%M:%S  -  %A, %d}",
-            "interval": 1
+            "interval": 1,
+			"on-click": "gsimplecal"
         },
 
         "network": {
