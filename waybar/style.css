@@ -64,6 +64,10 @@
   border-radius: 20px;
 }
 
+#memory:hover {
+    background-color: #7a7777;
+}
+
 #custom-music{
 padding: 0px 20px;
   margin: 5px 5px 5px 0px;
@@ -131,7 +135,7 @@ padding: 0px 10px;
 
 #workspaces button {
   color: #fff;
-  border-radius: 5px; /* Workspaces buttons are always rounded */
+  border-radius: 20px; /* Workspaces buttons are always rounded */
   padding: 0.3rem 0.6rem;
   background: transparent;
   transition: all 0.2s ease-in-out;
@@ -241,11 +245,11 @@ padding: 0px 10px;
   border-bottom-left-radius: 20px;
 }
 
-#battery {
+/*#battery {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   margin-right: 7px;
-}
+}*/
 
 #custom-uptime {
   color: #babbf1;
