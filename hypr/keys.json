@@ -1,0 +1,127 @@
+[
+    {
+        "Touches": "\"Windows\"",
+        "Commande": "",
+        "Description": "Touche MOD ()"
+    },
+    {
+        "Touches": " + I",
+        "Commande": "LoinafOS Panel",
+        "Description": "Lance le panel de LoinafOS"
+    },
+    {
+        "Touches": " + ENTER",
+        "Commande": "kitty",
+        "Description": "Ouvre kitty"
+    },
+    {
+        "Touches": " + Q",
+        "Commande": "hl.dsp.window.close()",
+        "Description": "Ferme la fenêtre active"
+    },
+    {
+        "Touches": " + E",
+        "Commande": "thunar",
+        "Description": "Ouvre thunar"
+    },
+    {
+        "Touches": " + V",
+        "Commande": "float toggle",
+        "Description": "Basculer l'état flottant d'une fenêtre"
+    },
+    {
+        "Touches": " + D",
+        "Commande": "wofi --show drun",
+        "Description": "Lance le menu d'applications"
+    },
+    {
+        "Touches": " + B",
+        "Commande": "firefox",
+        "Description": "Démarre le naviguateur Firefox"
+    },
+    {
+        "Touches": "CTRL + ALT + P",
+        "Commande": "wlogout",
+        "Description": "Ouvre le gestionnaire d'alimentation wlogout"
+    },
+    {
+        "Touches": " + SHIFT + S",
+        "Commande": "grim -g \"$(slurp)\"",
+        "Description": "Tracer une zone pour réaliser une capture d'écran"
+    },
+    {
+        "Touches": "CTRL + ALT + L",
+        "Commande": "hyprlock",
+        "Description": "Verrouile l'appareil"
+    },
+    {
+        "Touches": " + SHIFT + C",
+        "Commande": "vesktop",
+        "Description": "Lance Vesktop pour Hyprland"
+    },
+    {
+        "Touches": " + C",
+        "Commande": "discord",
+        "Description": "Lance Discord pour Hyprland"
+    },
+    {
+        "Touches": " + ALT + V",
+        "Commande": "cliphist list",
+        "Description": "Ouvre l'historique du presse-papier"
+    },
+    {
+        "Touches": " + F",
+        "Commande": "fullscreen toggle",
+        "Description": "Basculer le mode plein écran de la fenêtre active"
+    },
+    {
+        "Touches": " + SHIFT + G",
+        "Commande": "Move to special",
+        "Description": "Déplace la fenêtre dans le workspace \"special\""
+    },
+    {
+        "Touches": " + G",
+        "Commande": "toggle special",
+        "Description": "Basculer l'affichage de la fenêtre \"special\""
+    },
+    {
+        "Touches": " + (flèches)",
+        "Commande": "Move focus",
+        "Description": "Changer de fenêtre active en fonction de la direction prise"
+    },
+    {
+        "Touches": " + [0-9]",
+        "Commande": "Go to workspace [0-9]+1",
+        "Description": "Changer de workspace actif"
+    },
+    {
+        "Touches": " + SHIFT + [0-9]",
+        "Commande": "Move to workspace [0-9]+1",
+        "Description": "Déplacer la fenêtre vers un autre workspace tout en changeant le workspace actif"
+    },
+    {
+        "Touches": " + CTRL + [0-9]",
+        "Commande": "Move silently to workspace [0-9]+1",
+        "Description": "Déplacer la fenêtre vers un autre workspace sans changer le workspace actif"
+    },
+    {
+        "Touches": "ALT + TAB",
+        "Commande": "Go to previous workspace",
+        "Description": "Rebasculer au dernier workspace actif"
+    },
+    {
+        "Touches": " + scroll",
+        "Commande": "Move focus to e+1 or e-1",
+        "Description": "Change le workspace actif dans l'ordre numérique"
+    },
+    {
+        "Touches": " + clic gauche",
+        "Commande": "Drag window",
+        "Description": "Déplace la fenêtre dans le workspace actif"
+    },
+    {
+        "Touches": " + clic droit",
+        "Commande": "Resize window",
+        "Description": "Redimenssione la fenêtre"
+    }
+]

@@ -69,12 +69,19 @@
 }
 
 #custom-music{
-padding: 0px 20px;
+padding: 0px 10px;
   margin: 5px 5px 5px 0px;
   background-color: #450a06;
   color: #fff;
   border-radius: 20px;
+}
 
+#custom-power,
+#custom-super{
+    padding: 0px 10px;
+    margin: 5px 0px;
+    background-color: #450a06;
+    color: #fff;
 }
 
 #custom-weather{
@@ -220,7 +227,7 @@ padding: 0px 10px;
 #tray,
 #battery {
   background-color: #030438;
-  padding: 0.3rem 0.7rem;
+  padding: 0px 5px;
   margin: 5px 0px; 
   border-radius: 0;
   box-shadow: none;

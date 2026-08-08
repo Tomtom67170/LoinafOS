@@ -4,6 +4,8 @@
     "margin-bottom": 0,
     "spacing" : 0,
     "modules-left": [
+        "custom/super",
+        "custom/power",
         "hyprland/workspaces",
         "custom/music"
     ],
@@ -60,7 +62,7 @@
             "com.github.PintaProject.Pinta": "",
             "class<kitty> title<.*nvim.*>": "",
             "figma-linux": "",
-            "mpv": "",
+            "mpv": ""
         }
     },
 
@@ -98,8 +100,8 @@
 
     "network": {
         "format-wifi": "󰤢",
-        "format-ethernet": "󰈀 ",
-        "format-disconnected": "󰈂 ",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰈂",
         "interval": 5,
         "tooltip-format": "{essid} ({signalStrength}%)",
         "on-click": "nm-connection-editor"
@@ -150,7 +152,7 @@
                 "critical": 15
         },
         "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
+        "format-full": "Pleine",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
@@ -170,7 +172,7 @@
         "return-type": "json",
         "exec": "waybar-module-pomodoro --no-work-icons",
         "on-click": "waybar-module-pomodoro toggle",
-        "on-click-right": "waybar-module-pomodoro reset",
+        "on-click-right": "waybar-module-pomodoro reset"
     },
     "custom/weather": {
         "format": "{}",
@@ -179,6 +181,16 @@
         "interval": 900,
         "on-click": "kitty python ~/.config/waybar/scripts/change.py",
         "on-click-right": "python ~/.config/waybar/scripts/weather.py"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip-format": "Alimentation"
+    },
+    "custom/super": {
+        "format": "",
+        "on-click": "loinafctl",
+        "tooltip-format": "Loinaf OS"
     }
 }
 
