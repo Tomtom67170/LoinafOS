@@ -140,7 +140,7 @@ echo "DEBUG: Ces packets sont à installer: ${packages[@]}"
 read
 
 echo "Installation des packets manquant"
-yay -S --noconfirm --needed --answerclean None --answerdiff "${packages[@]}"
+yay -S --noconfirm --needed --answerclean None --answerdiff None "${packages[@]}"
 
 echo "Copie des fichiers de configuration"
 cp wofi ~/.config/ -r
