@@ -136,6 +136,9 @@ check_important_bin "wget"
 check_important_bin "hyprpaper"
 check_important_bin "hypridle"
 
+echo "DEBUG: Ces packets sont à installer: ${packages[@]}"
+read
+
 echo "Installation des packets manquant"
 yay -S --noconfirm --needed --answerclean None --answerdiff "${packages[@]}"
 
