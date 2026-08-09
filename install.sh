@@ -53,7 +53,7 @@ then
     read -p "Voulez-vous installer $1 (o/n)?" response
     if [ $response == "o" ] || [ $response == "O" ]
     then
-        if [ $npackages -eq 0]
+        if [ $npackages -eq 0 ]
         then
             npackages=1
             packages[0]=$1
