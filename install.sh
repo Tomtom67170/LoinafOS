@@ -32,7 +32,7 @@ then
     read -p "Voulez-vous installer which (o/n)?" response
     if [ $response == "o" ] || [ $response == "O" ]
     then
-        sudo pacman -S which
+        sudo pacman -S --noconfirm which
     else
         #echo "Annulation de l'installation..."
         echo -e "\033[31mInstallation annulée\033[0m"
@@ -53,7 +53,13 @@ then
     read -p "Voulez-vous installer $1 (o/n)?" response
     if [ $response == "o" ] || [ $response == "O" ]
     then
-        packages+=($1)
+        if [ $npackages -eq 0]
+        then
+            npackages=1
+            packages[0]=$1
+        else
+            packages+=($1)
+        fi
     else
         #echo "Annulation de l'installation..."
         echo -e "\033[31mInstallation annulée\033[0m"
@@ -64,7 +70,7 @@ else
 fi
 }
 
-#npackages=0
+npackages=0
 declare -a packages
 
 if [ $(id -u) -ne 0 ]
@@ -127,10 +133,13 @@ check_important_bin "flatpak"
 check_important_bin "python"
 check_important_bin "python-requests"
 check_important_bin "wget"
+check_important_bin "hyprpaper"
+check_important_bin "hypridle"
 
 echo "Installation des packets manquant"
 yay -S --noconfirm --needed --answerclean None --answerdiff "${packages[@]}"
 
+echo "Copie des fichiers de configuration"
 cp wofi ~/.config/ -r
 cp waybar ~/.config/ -r
 cp hypr ~/.config/ -r
@@ -144,6 +153,9 @@ flatpak override --user --socket=session-bus fr.loinaf.loinafsuper
 flatpak override --user --talk-name=org.freedesktop.Flatpak fr.loinaf.loinafsuper
 flatpak override --user --filesystem=~/.config/hypr fr.loinaf.loinafsuper
 rm latest.flatpak
+
+touch ~/.local/bin/loinafctl
+echo "#!/usr/bin/env zsh\nexec flatpak run fr.loinaf.loinafsuper \"\$@\"" > ~/.local/bin/loinafctl
 
 sudo systemctl enable sddm
 
