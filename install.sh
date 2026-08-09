@@ -25,7 +25,7 @@ fi
 
 check_which(){
 echo "Vérification de which"
-which whish
+pacman -Ql which
 if [ $? -ne 0 ]
 then
     echo -e "\033[33mwhich n'est pas installé mais est essentiel à l'installation de LoinafOS\033[0m"
