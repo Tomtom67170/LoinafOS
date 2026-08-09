@@ -125,7 +125,7 @@ check_important_bin "fastfetch"
 check_important_bin "sddm"
 check_important_bin "flatpak"
 check_important_bin "python"
-check_important_bin "python_requests"
+check_important_bin "python-requests"
 check_important_bin "wget"
 
 echo "Installation des packets manquant"
@@ -144,6 +144,8 @@ flatpak override --user --socket=session-bus fr.loinaf.loinafsuper
 flatpak override --user --talk-name=org.freedesktop.Flatpak fr.loinaf.loinafsuper
 flatpak override --user --filesystem=~/.config/hypr fr.loinaf.loinafsuper
 rm latest.flatpak
+
+sudo systemctl enable sddm
 
 echo "Installation terminée!"
 echo "Il est fortement recommandé de redémarrer votre appareil avant de poursuivre!"
