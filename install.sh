@@ -7,7 +7,7 @@ if [ $? -ne 0 ]
 then
     echo -e "\033[33m$1 n'est pas installé mais est essentiel à l'installation de LoinafOS\033[0m"
     read -p "Voulez-vous installer $1 (o/n)?" response
-    if [ $response == "o" || $response == "O" ]
+    if [ $response == "o" ] || [ $response == "O" ]
     then
         sudo pacman -S --needed git base-devel
         git clone https://aur.archlinux.org/yay.git
@@ -22,6 +22,28 @@ else
 
 fi
 }
+
+check_which(){
+echo "Vérification de which"
+which whish
+if [ $? -ne 0 ]
+then
+    echo -e "\033[33mwhich n'est pas installé mais est essentiel à l'installation de LoinafOS\033[0m"
+    read -p "Voulez-vous installer which (o/n)?" response
+    if [ $response == "o" ] || [ $response == "O" ]
+    then
+        sudo pacman -S which
+    else
+        #echo "Annulation de l'installation..."
+        echo -e "\033[31mInstallation annulée\033[0m"
+        exit
+    fi
+else
+    echo -e "\033[32mOK\033[0m"
+
+fi
+}
+
 
 check_important_bin(){
 yay -Q $1
@@ -73,7 +95,9 @@ if [ $? -ne 0 ]
 then
     echo "\033[31mInstallation annulée en raison d'une anomalie dans votre connexion Internet\033[0m"
 fi
+
 echo "Vous serez à plusieurs reprises invités à entrer votre mot de passe afin de réaliser certaines tâches de l'installation en tant que root"
+check_which
 check_yay "yay"
 check_important_bin "hyprland"
 check_important_bin "kitty"
