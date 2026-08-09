@@ -148,14 +148,17 @@ sudo cp -r "elegant-archlinux" "/usr/share/sddm/themes/"
 
 echo "Installation du panneau de configuration de LoinafOS"
 wget https://loinaf.fr/loinafos/loinafsuper/latest.flatpak
-flatpak install --user --reinstall latest.flatpak
+flatpak install --user --reinstall -y latest.flatpak
 flatpak override --user --socket=session-bus fr.loinaf.loinafsuper
 flatpak override --user --talk-name=org.freedesktop.Flatpak fr.loinaf.loinafsuper
 flatpak override --user --filesystem=~/.config/hypr fr.loinaf.loinafsuper
 rm latest.flatpak
 
+mkdir ~/.local/bin/loinafctl
 touch ~/.local/bin/loinafctl
 echo "#!/usr/bin/env zsh\nexec flatpak run fr.loinaf.loinafsuper \"\$@\"" > ~/.local/bin/loinafctl
+
+mkdir ~/.config/hypr/settings
 
 sudo systemctl enable sddm
 
