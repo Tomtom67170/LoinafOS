@@ -157,13 +157,23 @@ flatpak override --user --talk-name=org.freedesktop.Flatpak fr.loinaf.loinafsupe
 flatpak override --user --filesystem=~/.config/hypr fr.loinaf.loinafsuper
 rm latest.flatpak
 
-mkdir ~/.local/bin/loinafctl
+mkdir ~/.local/bin/
 touch ~/.local/bin/loinafctl
 echo "#!/usr/bin/env zsh\nexec flatpak run fr.loinaf.loinafsuper \"\$@\"" > ~/.local/bin/loinafctl
 
 mkdir ~/.config/hypr/settings
 
 sudo systemctl enable sddm
+
+echo "Vous devez choisir une disposition de clavier qui sera appliqué à Hyprland et sddm"
+echo "Ne répondez que si vous êtes sûr, dans le cas contraire, appuyez sur entrée et la disposition AZERTY sera sélectionnée"
+read -p "Disposition de clavier (us pour QWERTY par exemple): " language
+
+if [ "$language" == "" ]; then language="fr"
+fi
+
+sudo localectl set-x11-keymap "$language"
+echo "hl.config({\n\tinput = {\n\t\tkb_layout  = ${language},\n\t\tkb_variant = "",\n\t\tkb_model   = "",\n\t\tkb_options = "",\n\t\tkb_rules   = "",\n\n\t\tfollow_mouse = 1,\n\n\t\tsensitivity = 0, -- -1.0 - 1.0, 0 means no modification.\n\t\trepeat_rate = 50,\n\t\trepeat_delay = 200,\n\t\tnumlock_by_default = true,\n\n\t\ttouchpad = {\n\t\t\tnatural_scroll = true,\n\t\t},\n\t},\n})\n" > ~/.config/hypr/input.lua
 
 echo "Installation terminée!"
 echo "Il est fortement recommandé de redémarrer votre appareil avant de poursuivre!"
