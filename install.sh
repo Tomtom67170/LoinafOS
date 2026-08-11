@@ -173,7 +173,7 @@ if [ "$language" == "" ]; then language="fr"
 fi
 
 sudo localectl set-x11-keymap "$language"
-echo "hl.config({\n\tinput = {\n\t\tkb_layout  = ${language},\n\t\tkb_variant = "",\n\t\tkb_model   = "",\n\t\tkb_options = "",\n\t\tkb_rules   = "",\n\n\t\tfollow_mouse = 1,\n\n\t\tsensitivity = 0, -- -1.0 - 1.0, 0 means no modification.\n\t\trepeat_rate = 50,\n\t\trepeat_delay = 200,\n\t\tnumlock_by_default = true,\n\n\t\ttouchpad = {\n\t\t\tnatural_scroll = true,\n\t\t},\n\t},\n})\n" > ~/.config/hypr/input.lua
+echo "hl.config({input = {kb_layout  = "fr", kb_variant = "", kb_model   = "", kb_options = "", kb_rules   = "", follow_mouse = 1, sensitivity = 0, repeat_rate = 50, repeat_delay = 200, numlock_by_default = true, touchpad = { natural_scroll = true, }, }, })" > ~/.config/hypr/input.lua
 
 echo "Installation terminée!"
 echo "Il est fortement recommandé de redémarrer votre appareil avant de poursuivre!"
