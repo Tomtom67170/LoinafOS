@@ -189,7 +189,7 @@
     },
     "custom/super": {
         "format": "",
-        "on-click": "loinafctl",
+        "on-click": "flatpak run fr.loinaf.superloinaf",
         "tooltip-format": "Loinaf OS"
     }
 }
