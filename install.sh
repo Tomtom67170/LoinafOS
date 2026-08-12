@@ -135,6 +135,8 @@ check_important_bin "python-requests"
 check_important_bin "wget"
 check_important_bin "hyprpaper"
 check_important_bin "hypridle"
+check_important_bin "pavucontrol"
+check_important_bin "noto-fonts-emoji"
 
 echo "Installation des packets manquant"
 yay -S --noconfirm --needed --answerclean None --answerdiff None "${packages[@]}"
